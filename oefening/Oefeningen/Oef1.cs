@@ -8,7 +8,7 @@ namespace First
 {
     public partial class Tests
     {
-        List<int> list = new List<int>();
+        static List<int> list = new List<int>();
 
         public static void Oef1a()
         {

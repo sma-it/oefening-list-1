@@ -8,7 +8,7 @@ namespace First
 {
     public partial class Tests
     {
-        List<string> names = new List<string>();
+        static List<string> names = new List<string>();
 
         /*
          * Vraag in deze functie om een naam via Console.ReadLine()
