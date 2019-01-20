@@ -8,7 +8,7 @@ namespace First
 {
     public partial class Tests
     {
-        List<string> names = new List<string>();
+        static List<string> names = new List<string>();
 
         /*
          * Vraag in deze functie om een naam via Console.ReadLine()
@@ -17,14 +17,19 @@ namespace First
 
         public static void AddName()
         {
-            Console.WriteLine("AddName does not exist yet.");
+            Console.Write("Enter a name: ");
+            string result = Console.ReadLine();
+            names.Add(result);
         }
 
         /* Toon via deze functie de lijst op het scherm
          */
         public static void ShowList()
         {
-            Console.WriteLine("ShowList does not exist yet.");
+            names.ForEach((name) =>
+            {
+                Console.WriteLine(name);
+            });
         }
 
         /*
@@ -33,7 +38,9 @@ namespace First
          */ 
         public static void RemoveName()
         {
-            Console.WriteLine("RemoveName does not exist yet.");
+            Console.Write("Enter a name: ");
+            string result = Console.ReadLine();
+            names.Remove(result);
         }
 
         /*
@@ -41,7 +48,7 @@ namespace First
          */
         public static void SortNames()
         {
-            Console.WriteLine("SortNames does not exist yet.");
+            names.Sort();
         }
 
         /*
@@ -49,7 +56,7 @@ namespace First
         */
         public static void SortNamesReversed()
         {
-            Console.WriteLine("SortNamesReversed does not exist yet.");
+            names.Sort((a, b) => -a.CompareTo(b));
         }
 
         public static void Oef2()

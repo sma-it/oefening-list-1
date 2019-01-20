@@ -28,16 +28,64 @@ namespace First
 
     public partial class Room
     {
-        // ...
+        List<Enemy> enemies = new List<Enemy>();
+
+        public void AddEnemies()
+        {
+            int add = 0;
+            switch(Size)
+            {
+                case RoomSize.Small: add = 1; break;
+                case RoomSize.Medium: add = 2; break;
+                case RoomSize.Big: add = 4; break;
+            }
+
+            for(int i = 0; i < add; i++)
+            {
+                enemies.Add(
+                    new Enemy(
+                        (Race)random.Next(
+                            (int)Race.MaxValue
+                        )
+                    )
+                );
+            }
+        }
+
+        public void ViewEnemies()
+        {
+            Console.WriteLine("There are enemies in this room: ");
+            enemies.ForEach((enemy) =>
+            {
+                Console.WriteLine(enemy);
+            });
+        }
     }
 
     public partial class Tests
     {
         public static void TestRoom()
         {
+            var room1 = new Room(RoomSize.Small);
+            room1.AddEnemies();
 
+            var room2 = new Room(RoomSize.Medium);
+            room2.AddEnemies();
 
-            // ...
+            var room3 = new Room(RoomSize.Big);
+            room3.AddEnemies();
+
+            Console.WriteLine(room1);
+            room1.ViewEnemies();
+            Console.WriteLine();
+
+            Console.WriteLine(room2);
+            room2.ViewEnemies();
+            Console.WriteLine();
+
+            Console.WriteLine(room3);
+            room3.ViewEnemies();
+            Console.WriteLine();
         }
     }
 }

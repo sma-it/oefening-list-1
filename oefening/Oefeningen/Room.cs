@@ -27,13 +27,13 @@ namespace First
             switch(Size)
             {
                 case RoomSize.Small:
-                    Area = 5 + random.Next((int)Size * 5);
+                    Area = 5 + random.Next(5);
                     break;
                 case RoomSize.Medium:
-                    Area = 10 + random.Next((int)Size * 5);
+                    Area = 10 + random.Next(10);
                     break;
                 case RoomSize.Big:
-                    Area = 20 + random.Next((int)Size * 5);
+                    Area = 20 + random.Next(15);
                     break;
             }
         }

@@ -23,23 +23,45 @@ namespace First
         /*
          * Voeg een lijst van rooms toe aan deze class.
          */
+        List<Room> Rooms = new List<Room>();
 
         /* Voeg drie functies toe: AddSmallRoom(), AddMediumRoom()
          * en AddBigRoom(). Deze functies voegen een geschikte
          * kamer toe aan de lijst.
          */
+        public void AddSmallRoom()
+        {
+            Rooms.Add(new Room(RoomSize.Small));
+        }
+
+        public void AddMediumRoom()
+        {
+            Rooms.Add(new Room(RoomSize.Medium));
+        }
+
+        public void AddBigRoom()
+        {
+            Rooms.Add(new Room(RoomSize.Big));
+        }
 
          
         /* Deze functie toont alle kamers op het scherm.
          */ 
         public void ShowRooms()
         {
-
+            Rooms.ForEach((room) =>
+            {
+                Console.WriteLine(room);
+            });
         }
 
         /* Maak een functie SortRooms(), waarmee je de lijst met kamer kan
          * ordenen van klein naar groot,
          */
+        public void SortRooms()
+        {
+            Rooms.Sort((a, b) => a.Area.CompareTo(b.Area));
+        }
     }
 
     public partial class Tests
@@ -50,6 +72,10 @@ namespace First
 
             var menu = new Utils.Menu();
             menu.AddOption('1', "Show all Rooms", castle.ShowRooms);
+            menu.AddOption('2', "Add Small Room", castle.AddSmallRoom);
+            menu.AddOption('3', "Add Medium Room", castle.AddMediumRoom);
+            menu.AddOption('4', "Add Big Room", castle.AddBigRoom);
+            menu.AddOption('5', "Sort Rooms", castle.SortRooms);
 
             menu.Start();
         }
