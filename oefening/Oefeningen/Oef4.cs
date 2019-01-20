@@ -16,7 +16,7 @@ namespace First
      * Voeg ook een functie om enemies toe te voegen. Een grote 
      * kamer krijgt 4 enemies, een gewone kamer 2, en een kleine
      * kamer 1. Via een random object kan je het ras van je enemy 
-     * varieeren.
+     * variëren.
      * 
      * Voeg ook een functie toe die alle enemies in de kamer op het 
      * scherm te tonen.
@@ -25,7 +25,7 @@ namespace First
      * Je gebruikt daarbij een menu zoals in de vorige oefening.
      * 
      */
-     
+
     public partial class Room
     {
         // ...
