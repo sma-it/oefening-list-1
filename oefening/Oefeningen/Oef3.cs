@@ -38,7 +38,8 @@ namespace First
         }
 
         /* Maak een functie SortRooms(), waarmee je de lijst met kamer kan
-         * ordenen van klein naar groot,
+         * ordenen van klein naar groot. Om dit te kunnen doen, zal je eveneens
+         * extra code in de Room class moeten voorzien.
          */
     }
 
