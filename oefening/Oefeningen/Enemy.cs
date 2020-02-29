@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oefening_template1.Oefeningen
+namespace First
 {
     public enum Race
     {
