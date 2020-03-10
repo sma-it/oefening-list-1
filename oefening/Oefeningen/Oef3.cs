@@ -22,6 +22,7 @@ namespace First
     {
         /*
          * Voeg een lijst van rooms toe aan deze class.
+         * Maak deze lijst static door te starten met het keywoord static.
          */
 
         /* Voeg drie functies toe: AddSmallRoom(), AddMediumRoom()
