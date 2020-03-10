@@ -19,10 +19,12 @@ namespace First
      * variëren.
      * 
      * Voeg ook een functie toe die alle enemies in de kamer op het 
-     * scherm te tonen.
+     * scherm toont.
      * 
-     * In de testfunctie voorzie je zelf code om dit allemaal te testen.
-     * Je gebruikt daarbij een menu zoals in de vorige oefening.
+     * In de testfunctie voorzie je zelf code om dit allemaal als volgt te testen:
+     * Maak van elk type Room een object.
+     * Voeg enemies toe aan elke Room.
+     * Toon de Room-objecten met hun enemies op het scherm.
      * 
      */
 
